@@ -74,4 +74,3 @@ create_table_if_not_exists(orders, orders.__table__.name)
 
 for i in range(1, 25001):
     post_order_data(1000)
-    time.sleep(2)
