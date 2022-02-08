@@ -58,13 +58,6 @@ def order_base_gen(customer_base_size):
 
 
 def post_order_data(customer_base_size):
-    # customer_id: int
-    # type: str
-    # qty: int
-    # retail_price: float
-    # order_date: datetime.datetime
-    # load_ts: datetime.datetime
-
     order_det_ip = order_base_gen(customer_base_size)
     # print(order_det_ip.json())
     r = requests.post("http://127.0.0.1:8000/createOrdersRecords/", data=order_det_ip.json())
